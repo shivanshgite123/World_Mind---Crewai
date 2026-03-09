@@ -3,7 +3,7 @@ import requests
 import json
 
 st.set_page_config(
-    page_title="World Mind · AI News Summarizer",
+    page_title="World Mind · Real-time Intelligence",
     page_icon="🌐",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -243,7 +243,7 @@ label[data-testid="stWidgetLabel"] {
 
 # ── Sidebar ──────────────────────────────────────────────
 with st.sidebar:
-    st.markdown('<div class="sidebar-title">📡 Quick Queries</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-title"> Quick Queries</div>', unsafe_allow_html=True)
     examples = [
         "Latest AI breakthroughs 2024",
         "Global climate change updates",
@@ -256,7 +256,7 @@ with st.sidebar:
         st.markdown(f'<div class="query-chip">↗ {ex}</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-title">⚙️ System</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-title"> System</div>', unsafe_allow_html=True)
     st.markdown(
         '<span class="status-dot"></span><span style="font-size:0.8rem;color:#6b7280;">RAG Pipeline Active</span>',
         unsafe_allow_html=True
@@ -272,7 +272,7 @@ with st.sidebar:
 # ── Main Banner ──────────────────────────────────────────
 st.markdown("""
 <div class="main-banner">
-    <div class="main-title"> World Mind</div>
+    <div class="main-title"> world_mind</div>
     <div class="main-subtitle">Real-time intelligence · RAG powered</div>
 </div>
 <div class="divider"></div>
@@ -298,7 +298,7 @@ with col1:
         box-shadow: 0 8px 25px rgba(220,38,38,0.25);
     }
     </style>""", unsafe_allow_html=True)
-    if st.button("  Politics", use_container_width=True):
+    if st.button("🌍  Politics", use_container_width=True):
         st.session_state.query = "Latest world political crisis today"
         st.session_state.auto_run = True
 
@@ -375,7 +375,7 @@ if should_run:
             except requests.exceptions.ConnectionError:
                 st.markdown("""
                 <div class="error-card">
-                ⚠️ <strong>Cannot connect to backend.</strong><br>
+                 <strong>Cannot connect to backend.</strong><br>
                 Make sure the FastAPI server is running:<br>
                 <code>cd backend && uvicorn main:app --reload --port 8000</code>
                 </div>
@@ -383,6 +383,6 @@ if should_run:
             except Exception as e:
                 st.markdown(f"""
                 <div class="error-card">
-                ⚠️ <strong>Error:</strong> {e}
+                 <strong>Error:</strong> {e}
                 </div>
                 """, unsafe_allow_html=True)

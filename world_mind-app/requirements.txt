@@ -1,7 +1,8 @@
 streamlit
 fastapi
 uvicorn
-langgraph
+crewai
+crewai-tools
 langchain
 langchain-community
 tavily-python
