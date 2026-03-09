@@ -1,4 +1,4 @@
-# 🌐 AI News Summarizer (CrewAI Edition)
+#  AI News Summarizer (CrewAI )
 
 A production-ready AI application that summarizes real-time global news using a **Retrieval Augmented Generation (RAG)** pipeline orchestrated by **CrewAI**.
 
